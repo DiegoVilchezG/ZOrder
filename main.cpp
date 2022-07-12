@@ -11,7 +11,7 @@ using namespace std;
 int datos = 5000;
 int dimensiones = 10;
 int intLimit = 8;
-const int inicio = 3, fin = 32;
+const int inicio = 3, fin = 16;
 const int bucles = 4;
 
 int vecinos[bucles] = { 5,10,15,20 };
@@ -95,7 +95,7 @@ vector<int> knnMulti(vector<vector<int>> MD, vector<int> d, int v) {
 	v++;
 	priority_queue<Nodo, vector<Nodo>, decltype(comparar)*> cola1(comparar);
 	for (int i = 0; i < v; i++) {
-		cola1.push(Nodo(INT32_MAX, -1));
+		cola1.push(Nodo(INT16_MAX, -1));
 	}
 
 	for (int i = 0; i < datos; i++) {
@@ -117,7 +117,7 @@ vector<int> knnUni(vector<int>dZOrder, int d, int v) {
 	v++;
 	priority_queue<Nodo, vector<Nodo>, decltype(comparar)*> cola1(comparar);
 	for (int i = 0; i < v; i++) {
-		cola1.push(Nodo(INT32_MAX, -1));
+		cola1.push(Nodo(INT16_MAX, -1));
 	}
 
 	for (int i = 0; i < datos; i++) {
